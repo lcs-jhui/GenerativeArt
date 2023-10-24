@@ -7,22 +7,36 @@
 
 import SwiftUI
 
+
+
+
+
+
 struct TileView: View {
+    
+    //MARK: Stored Properties
+    let flipOne = Int.random(in: 1...2)
+    
+    //MARK: Computed Properties
     var body: some View {
-        VStack {
+        ZStack {
             
-            //Top Right triangle
-            TriangleTopRight()
-                .stroke(.black)
-                .fill(.clear)
-                .aspectRatio(1.0, contentMode: .fit)
+            if flipOne == 1 {
+                
+                //Top Right triangle
+                TriangleTopRight()
+                    .stroke(.black)
+                    .fill(.clear)
+                    .aspectRatio(1.0, contentMode: .fit)
                 
                 //Bottom Left triangle
                 TriangleBottomLeft()
                     .stroke(.black)
                     .fill(.clear)
                     .aspectRatio(1.0, contentMode: .fit)
-            
+                
+            } else {
+                
                 //Top Left triangle
                 TriangleTopLeft()
                     .stroke(.black)
@@ -34,7 +48,8 @@ struct TileView: View {
                     .stroke(.black)
                     .fill(.clear)
                     .aspectRatio(1.0, contentMode: .fit)
-            
+                
+            }
             
         }
         .padding()
