@@ -13,6 +13,7 @@
 		B9817F0E2AE81D4100E9C287 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9817F0D2AE81D4100E9C287 /* TileView.swift */; };
 		B9817F102AE81D5500E9C287 /* MosaicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9817F0F2AE81D5500E9C287 /* MosaicView.swift */; };
 		B9817F132AE8261D00E9C287 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9817F122AE8261D00E9C287 /* Shape.swift */; };
+		B9817F152AE828E100E9C287 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9817F142AE828E000E9C287 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B9817F0D2AE81D4100E9C287 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		B9817F0F2AE81D5500E9C287 /* MosaicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicView.swift; sourceTree = "<group>"; };
 		B9817F122AE8261D00E9C287 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		B9817F142AE828E000E9C287 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B9817F122AE8261D00E9C287 /* Shape.swift */,
+				B9817F142AE828E000E9C287 /* Coin.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				B9817F0E2AE81D4100E9C287 /* TileView.swift in Sources */,
 				B9817F102AE81D5500E9C287 /* MosaicView.swift in Sources */,
 				B9817EFE2AE81AA700E9C287 /* GenerativeArtApp.swift in Sources */,
+				B9817F152AE828E100E9C287 /* Coin.swift in Sources */,
 				B9817F132AE8261D00E9C287 /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
