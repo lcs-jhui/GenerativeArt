@@ -11,7 +11,12 @@ import SwiftUI
 struct TileView: View {
     
     //MARK: Stored Properties
-    let flipOne = Coin.flip()
+    
+    //Determine the diagonal
+    let flipOne = Coin.tails
+    
+    //Determine whether top or bottom triangle gets filled with colour one
+    let flipTwo = Coin.heads
     
     //Choosing marker colours
     let markerOne = Color.red
@@ -39,13 +44,13 @@ struct TileView: View {
                 //Top Right triangle
                 TriangleTopRight()
                     .stroke(.black)
-                    .fill(colourOne)
+                    .fill(flipTwo == .heads ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 //Bottom Left triangle
                 TriangleBottomLeft()
                     .stroke(.black)
-                    .fill(colourTwo)
+                    .fill(flipTwo == .tails ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             } else {
@@ -53,13 +58,13 @@ struct TileView: View {
                 //Top Left triangle
                 TriangleTopLeft()
                     .stroke(.black)
-                    .fill(colourOne)
+                    .fill(flipTwo == .heads ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 //Bottom Right Triangle
                 TriangleBottomRight()
                     .stroke(.black)
-                    .fill(colourTwo)
+                    .fill(flipTwo == .tails ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             }
