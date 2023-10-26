@@ -18,6 +18,9 @@ struct TileView: View {
     //Determine whether top or bottom triangle gets filled with colour one
     let flipTwo = Coin.heads
     
+    //Determine whether to fill to remaining triangle with colourTwo or not
+    let flipThree = Coin.tails
+    
     //Choosing marker colours
     let markerOne = Color.red
     let markerTwo = Color.blue
@@ -36,6 +39,15 @@ struct TileView: View {
         return flipForColor == .heads ? markerTwo : markerOne
     }
     
+    //Determine fill colour for remainign triangle
+    var remainingTriangleFillColor: Color {
+        if flipThree == .heads {
+            return colourTwo
+        } else {
+            return .clear
+        }
+    }
+    
     var body: some View {
         ZStack {
             
@@ -44,13 +56,13 @@ struct TileView: View {
                 //Top Right triangle
                 TriangleTopRight()
                     .stroke(.black)
-                    .fill(flipTwo == .heads ? colourOne : .clear)
+                    .fill(flipTwo == .heads ? colourOne : remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 //Bottom Left triangle
                 TriangleBottomLeft()
                     .stroke(.black)
-                    .fill(flipTwo == .tails ? colourOne : .clear)
+                    .fill(flipTwo == .tails ? colourOne : remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             } else {
@@ -58,13 +70,13 @@ struct TileView: View {
                 //Top Left triangle
                 TriangleTopLeft()
                     .stroke(.black)
-                    .fill(flipTwo == .heads ? colourOne : .clear)
+                    .fill(flipTwo == .heads ? colourOne : remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 //Bottom Right Triangle
                 TriangleBottomRight()
                     .stroke(.black)
-                    .fill(flipTwo == .tails ? colourOne : .clear)
+                    .fill(flipTwo == .tails ? colourOne : remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             }
