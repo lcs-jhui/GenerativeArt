@@ -24,19 +24,11 @@ struct TileView: View {
     
     //Set colours based on the coin flip
     var colourOne: Color {
-        if flipForColor == .heads {
-            return markerOne
-        } else {
-            return markerTwo
-        }
+        return flipForColor == .heads ? markerOne : markerTwo
     }
     
     var colourTwo: Color {
-        if flipForColor == .heads {
-            return markerTwo
-        } else {
-            return markerOne
-        }
+        return flipForColor == .heads ? markerTwo : markerOne
     }
     
     var body: some View {
