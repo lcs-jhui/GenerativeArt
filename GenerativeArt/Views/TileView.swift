@@ -82,7 +82,6 @@ struct TileView: View {
             }
             
         }
-        .padding()
     }
 }
 
