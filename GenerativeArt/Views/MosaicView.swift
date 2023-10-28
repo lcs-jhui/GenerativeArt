@@ -12,24 +12,18 @@ struct MosaicView: View {
         
         Grid (horizontalSpacing: 0, verticalSpacing: 0){
             
-            GridRow {
-                ForEach(1..<4) { i in
-                    TileView()
+            //Number of rows
+            ForEach(1..<4) { j in
+                
+                GridRow {
+                    
+                    //Repeat within a row (columns)
+                    ForEach(1..<4) { i in
+                        TileView()
+                    }
                 }
+                
             }
-            
-            GridRow {
-                ForEach(1..<4) { i in
-                    TileView()
-                }
-            }
-            
-            GridRow {
-                ForEach(1..<4) { i in
-                    TileView()
-                }
-            }
-            
         }
     }
 }
