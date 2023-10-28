@@ -11,7 +11,7 @@ struct MosaicView: View {
     
     //MARK: Stored Properties
     @State var columns = 3.0
-    @State var rows = 3
+    @State var rows = 3.0
     
     //MARK: Computed Properties
     var body: some View {
@@ -20,7 +20,7 @@ struct MosaicView: View {
             Grid (horizontalSpacing: 0, verticalSpacing: 0){
                 
                 //Number of rows
-                ForEach(0..<rows, id: \.self) { j in
+                ForEach(0..<Int(rows), id: \.self) { j in
                     
                     GridRow {
                         
@@ -34,7 +34,9 @@ struct MosaicView: View {
             }
             
             Slider(value: $columns, in: 1...10, step: 1.0)
+            Slider(value: $rows, in: 1...10, step: 1.0)
         }
+        .padding()
     }
 }
 
